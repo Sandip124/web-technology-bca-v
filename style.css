@@ -1,0 +1,30 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input{
+    display: block;
+    background: white;
+    float:left;
+    padding: 10px;
+}
+
+.form-group{
+    display: block;
+    margin:20px;
+    width:100px;
+}
+
+.btn
+{
+    width:100%;
+    display: block;
+    margin-top:10px;
+}
+.btn-success
+{
+    background:#068f06;
+    color:#fff;
+    border:1px solid #eee;
+    border-radius: 5px;
+}
