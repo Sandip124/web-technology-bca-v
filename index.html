@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Some Javascript</title>
+    
+</head>
+<style>
+
+.form-group
+{
+    display:block;
+    margin:5px;
+}
+.login
+{
+    width:350px;
+    margin:0px auto;
+    margin-top: 200px;
+}
+</style>
+<body>
+   <div class="login">
+    <!-- <a href="https://stackoverflow.com/users/8212468/sandip124"><img src="https://stackoverflow.com/users/flair/8212468.png?theme=dark" width="208" height="58" alt="profile for Sandip124 at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Sandip124 at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a> -->
+    <form action="">
+        <h1 id="heading">Login Page</h1>
+     <div class="form-group">
+         <input type="text" name="username" id="username">
+     </div>
+     <div class="form-group">
+         <input type="password" name="password" id="password">
+     </div>
+     
+     <div id="display"></div>
+     <input type="button" id = "" value="GO" onclick="displayUserInfo()">
+     <input type="button" id = "Password" value="Toggle Passowrd" onclick="togglePasswordField()">
+     <input type="button" id = "headingButton" value="Toggle Heading" onclick="toggleHeading()">
+    </form>
+   </div>
+    <script>
+    let username = document.getElementById("username");
+    let password = document.getElementById("password");
+    var display = document.getElementById("display");
+    var heading = document.getElementById("heading");
+
+    function displayUserInfo()
+    {
+        let USERNAME  = username.value;
+        let PASSWORD = password.value;
+
+        display.innerHTML = `Username = ${USERNAME} and Passowrd = ${PASSWORD}`;
+        console.log(`Username = ${USERNAME} and Passowrd = ${PASSWORD}`);
+    }
+
+    function togglePasswordField()
+    {
+        if(password.getAttribute("type") == "password")
+        {
+            password.setAttribute("type","text");
+            document.getElementById("Password").value="Hide Password";
+        }else{
+            password.setAttribute("type","password")
+            document.getElementById("Password").value="show Password";
+        }
+    }
+
+    function toggleHeading()
+    {
+        if(heading.style.display == "none")
+        {
+            heading .style.display = "block";
+            document.getElementById("headingButton").value = "Hide Heading.";
+        }else{
+            heading .style.display = "none";
+            document.getElementById("headingButton").value = "Click to show Heading.";
+        }
+    }
+    </script>
+</body>
+</html>
