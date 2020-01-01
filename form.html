@@ -12,22 +12,38 @@
         <div class="form-group">
             <label for="firstName">First Name</label>
             <input type="text" class="form-control" name="firstName" id="firstName"/>
+            <span id="error-firstName"></span>
         </div>
         
         <div class="form-group">
             <label for="lastName">Last Name</label>
             <input type="text" class="form-control" name="lastName" id="lastName"/>
+            <span id="error-lastName"></span>
         </div>
         
         <div class="form-group">
             <label for="age">Age</label>
-            <input type="number" class="form-control" name="age" id="age"/>
+            <input type="text" class="form-control" name="age" id="age"/>
+            <span id="error-age"></span>
         </div>
         
         <div class="form-group">
             <input type="button" class="btn btn-success" value="Submit" id="submitBtn" />
         </div>
     </form>
+
+    <div class="table-custom">
+        <table>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Age</th>
+            </tr>
+            <tbody id="dynamicData">
+
+            </tbody>
+        </table>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

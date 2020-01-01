@@ -8,6 +8,10 @@ input{
     float:left;
     padding: 10px;
 }
+form{
+    display: inline-block;
+    margin: 10px;
+}
 
 .form-group{
     display: block;
@@ -27,4 +31,18 @@ input{
     color:#fff;
     border:1px solid #eee;
     border-radius: 5px;
+}
+
+table{
+    display: inline-block;
+    position: relative;
+    background-color: #fff;
+    border:1px solid #eee;
+    border-collapse: collapse;
+    padding:5px;
+    clear: both;
+}
+table > tr > td
+{
+    padding:5px;
 }
